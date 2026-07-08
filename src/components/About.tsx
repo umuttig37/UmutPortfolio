@@ -1,27 +1,48 @@
-import { SectionHeading } from './SectionHeading'
-
-const details = [
-  'ICT and software development background',
-  'Frontend, backend and database experience',
-  'Learning by building real product workflows',
+const skills = [
+  { label: 'HTML', icon: '5' },
+  { label: 'CSS', icon: '3' },
+  { label: 'JavaScript', icon: 'JS' },
+  { label: 'TypeScript', icon: 'TS' },
+  { label: 'React', icon: 'R' },
+  { label: 'Node.js', icon: 'JS' },
+  { label: 'Python', icon: 'PY' },
+  { label: 'Java', icon: 'J' },
+  { label: 'SQL', icon: 'DB' },
+  { label: 'Git', icon: 'G' },
 ]
 
 export function About() {
   return (
-    <section className="content-section section-shell" id="about">
-      <SectionHeading eyebrow="About" title="Building software with a practical edge" />
-      <div className="about-grid">
-        <p>
-          I am a Finnish junior software developer with a background in ICT and software development. I like projects where the interface, data model and business workflow all have to make sense together.
-        </p>
-        <p>
-          My strongest interest is in full stack development, automation and business-oriented web apps. I enjoy turning rough ideas into tools that are easier to use, maintain and explain.
-        </p>
-        <ul>
-          {details.map((item) => (
-            <li key={item}>{item}</li>
+    <section className="about-section section-shell" id="about">
+      <h2 className="section-title">About</h2>
+      <div className="about-layout">
+        <div className="about-copy">
+          <svg className="profile-line" viewBox="0 0 260 260" role="img" aria-label="Minimal profile outline">
+            <defs>
+              <linearGradient id="profile-gradient" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stopColor="#4ca4ef" />
+                <stop offset="100%" stopColor="#ff4d67" />
+              </linearGradient>
+            </defs>
+            <path d="M130 32c38 0 58 25 58 64s-20 66-58 66-58-27-58-66 20-64 58-64Z" />
+            <path d="M74 154c-27 14-42 20-48 36-5 13-5 28-3 42 27 17 64 25 107 25s80-8 107-25c2-14 2-29-3-42-6-16-21-22-48-36" />
+          </svg>
+          <p>
+            I am a Finnish junior software developer with a background in ICT and software development. I enjoy building web applications where the interface, data and business workflow have to work together.
+          </p>
+          <p>
+            My current focus is React, TypeScript, backend development and practical business tools. I like learning by building, improving workflows and turning unclear ideas into software that is easier to use.
+          </p>
+        </div>
+
+        <div className="skill-card-grid" aria-label="Technical skills">
+          {skills.map((skill) => (
+            <article className="tech-card" key={skill.label}>
+              <strong>{skill.icon}</strong>
+              <span>{skill.label}</span>
+            </article>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   )
