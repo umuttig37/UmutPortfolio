@@ -1,4 +1,4 @@
-const highlights = ['Full stack', 'Automation', 'Business web apps']
+const highlights = ['React + TypeScript', 'Business apps', 'Automation']
 
 export function Hero() {
   return (
@@ -10,7 +10,7 @@ export function Hero() {
           <span>Software Developer</span>
         </h1>
         <p className="hero-intro">
-          I build practical web applications with clean interfaces, thoughtful workflows and a strong eye for how software supports real business problems.
+          I build practical web applications with clean interfaces and clear workflows. I am especially interested in full stack projects where the software has to support real business work, not just look good on the surface.
         </p>
         <div className="hero-actions" aria-label="Primary actions">
           <a className="button button-primary" href="#projects">
