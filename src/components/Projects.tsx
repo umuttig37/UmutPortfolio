@@ -7,8 +7,8 @@ export function Projects() {
     <section className="content-section section-shell" id="projects">
       <SectionHeading
         eyebrow="Projects"
-        title="Selected work, kept honest"
-        text="A first pass focused on real projects and clear case-study notes. More polished project pages can come after the actual apps are ready to show."
+        title="Projects"
+        text="A small collection of real work and active builds. I keep private or unfinished projects as case studies instead of pretending everything has a public live demo."
       />
       <div className="projects-grid">
         {projects.map((project) => (

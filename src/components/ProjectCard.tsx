@@ -20,6 +20,11 @@ export function ProjectCard({ project }: { project: Project }) {
         <h3>{project.title}</h3>
         <p>{project.summary}</p>
         {project.role ? <p className="project-role">{project.role}</p> : null}
+        <div className="project-focus" aria-label={`${project.title} focus areas`}>
+          {project.focus.map((item) => (
+            <span key={item}>{item}</span>
+          ))}
+        </div>
         <div className="tech-list" aria-label={`${project.title} technologies`}>
           {project.tech.map((tech) => (
             <span key={tech}>{tech}</span>

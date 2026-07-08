@@ -283,7 +283,13 @@ main {
 
 .project-card {
   display: grid;
-  min-height: 440px;
+  min-height: 480px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.28);
+  transform: translateY(-4px);
 }
 
 .project-marker {
@@ -353,11 +359,35 @@ main {
   margin-top: 14px !important;
 }
 
+.project-focus {
+  display: grid;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.project-focus span {
+  position: relative;
+  padding-left: 18px;
+  color: #f4f4f4;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.project-focus span::before {
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 8px;
+  height: 2px;
+  background: #ff4d67;
+  content: '';
+}
+
 .tech-list {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 22px;
+  margin-top: 24px;
 }
 
 .tech-list span {

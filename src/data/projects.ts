@@ -6,6 +6,7 @@ export type Project = {
   status: ProjectStatus
   summary: string
   role?: string
+  focus: string[]
   tech: string[]
   links?: {
     label: string
@@ -23,6 +24,7 @@ export const projects: Project[] = [
       'A business-oriented vehicle transport platform for customer transport orders, driver workflows and admin operations. The work centers on order flows, pricing logic, status handling, dashboard features and practical UI improvements.',
     role:
       'Product owner and developer, focused on product direction, business logic, order workflow, admin and driver features, and UI polish.',
+    focus: ['Order workflow', 'Admin tools', 'Driver views', 'Pricing logic'],
     tech: ['Python', 'Flask', 'SQLite/PostgreSQL', 'HTML', 'CSS', 'JavaScript', 'Jinja2'],
     links: [{ label: 'Architecture notes', href: '#contact' }],
     notes:
@@ -33,7 +35,8 @@ export const projects: Project[] = [
     type: 'Marketplace / full stack web app',
     status: 'live',
     summary:
-      'A service marketplace style web application with authentication, listings, user flows and a modern interface. Built as a full stack product direction exercise around real marketplace interactions.',
+      'A service marketplace style web application with authentication, listings and user flows. The goal is to practice building a product-like full stack application around real marketplace interactions.',
+    focus: ['Authentication', 'Listings', 'User flows', 'Marketplace UI'],
     tech: ['Next.js', 'TypeScript', 'Supabase/Firebase', 'Tailwind', 'Modern frontend stack'],
     links: [
       { label: 'GitHub', href: 'https://github.com/umuttig37' },
@@ -46,6 +49,7 @@ export const projects: Project[] = [
     status: 'case-study',
     summary:
       'A business website and catalog experience for paper and sanitary products, including product presentation and a contact/order flow for customer inquiries.',
+    focus: ['Catalog structure', 'Contact flow', 'Business content', 'Frontend polish'],
     tech: ['React', 'Vite', 'TypeScript', 'Node/Express', 'Nodemailer'],
     links: [{ label: 'GitHub', href: 'https://github.com/umuttig37' }],
   },
