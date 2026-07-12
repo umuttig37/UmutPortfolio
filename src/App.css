@@ -31,6 +31,10 @@ main {
 }
 
 .site-header a {
+  position: relative;
+  display: grid;
+  height: 70px;
+  align-items: center;
   color: #f2f2f2;
   font-size: clamp(1rem, 1.2vw, 1.3rem);
   font-weight: 650;
@@ -39,9 +43,35 @@ main {
   transition: color 180ms ease;
 }
 
+.site-header a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: #ff4d67;
+  content: '';
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 180ms ease;
+}
+
 .site-header a:hover,
-.site-header a:focus-visible {
+.site-header a:focus-visible,
+.site-header a.active {
   color: #ff4d67;
+}
+
+.site-header a.active::after {
+  transform: scaleX(1);
+}
+
+.site-header a:focus-visible,
+.button:focus-visible,
+.project-links a:focus-visible,
+.contact-links a:focus-visible {
+  outline: 2px solid #52b4ff;
+  outline-offset: 4px;
 }
 
 .section-shell {
@@ -51,6 +81,7 @@ main {
 
 .hero-section {
   min-height: 100vh;
+  min-height: 100svh;
   display: grid;
   place-items: center;
   padding: 100px 0 80px;
@@ -120,6 +151,7 @@ main {
 .content-section,
 .contact-section {
   min-height: 100vh;
+  scroll-margin-top: 70px;
   padding: 108px 0 92px;
 }
 
@@ -501,6 +533,19 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .about-layout {
+    gap: 58px;
+  }
+
+  .about-copy p {
+    width: min(100%, 680px);
+  }
+
+  .contact-layout {
+    width: min(100%, 760px);
+    margin: 0 auto;
+  }
+
   .skill-card-grid,
   .projects-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -519,7 +564,8 @@ main {
   }
 
   .site-header a {
-    font-size: 0.94rem;
+    height: 64px;
+    font-size: clamp(0.8rem, 3.7vw, 0.94rem);
   }
 
   .section-shell {
@@ -531,11 +577,11 @@ main {
   }
 
   .hero-copy h1 {
-    font-size: 2.7rem;
+    font-size: clamp(2.35rem, 11vw, 2.7rem);
   }
 
   .hero-copy p {
-    font-size: 2.15rem;
+    font-size: clamp(1.85rem, 9vw, 2.15rem);
   }
 
   .button {
@@ -560,9 +606,44 @@ main {
     font-size: 1.02rem;
   }
 
-  .skill-card-grid,
+  .skill-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .tech-card {
+    min-height: 104px;
+  }
+
+  .tech-card strong {
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 1.75rem;
+  }
+
+  .tech-card span {
+    font-size: 0.75rem;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-body,
+  .project-marker {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .contact-note,
+  .contact-links a,
+  .contact-info-card {
+    padding: 22px;
+  }
+
+  .contact-note .button {
+    width: 100%;
+    min-width: 0;
   }
 }
 
