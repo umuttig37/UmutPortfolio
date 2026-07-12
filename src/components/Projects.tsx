@@ -8,7 +8,7 @@ export function Projects() {
       <SectionHeading
         eyebrow="Projects"
         title="Projects"
-        text="A small collection of real work and active builds. I keep private or unfinished projects as case studies instead of pretending everything has a public live demo."
+        text="Some of the work I have been involved in so far. A few projects are private or still in development, so I explain my part in them instead of adding empty demo links."
       />
       <div className="projects-grid">
         {projects.map((project) => (

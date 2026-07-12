@@ -8,7 +8,7 @@ export function Hero() {
         <p>I&apos;m a software developer.</p>
         <div className="hero-actions" aria-label="Primary actions">
           <a className="button button-primary" href="#projects">
-            View my work <span aria-hidden="true">↓</span>
+            View my work <span aria-hidden="true">&darr;</span>
           </a>
         </div>
       </div>

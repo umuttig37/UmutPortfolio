@@ -18,7 +18,7 @@ export function Contact() {
       <SectionHeading
         eyebrow="Contact"
         title="Contact"
-        text="I am keeping the public contact details simple while the portfolio is still growing. GitHub is the best place to start for now."
+        text="I am open to junior developer roles, project work and conversations about building useful software. GitHub is the easiest place to reach me for now."
       />
       <div className="contact-layout">
         <div className="contact-links" aria-label="Contact links">
@@ -36,24 +36,16 @@ export function Contact() {
             )
           ))}
         </div>
-        <form className="contact-form" aria-label="Contact form preview" onSubmit={(event) => event.preventDefault()}>
-          <p className="contact-form-intro">
-            A real contact form can be connected later. For the first public version, this stays as a static UI preview.
+        <div className="contact-note">
+          <span>Let&apos;s talk</span>
+          <h3>Have something in mind?</h3>
+          <p>
+            Whether it is a junior role, a practical web project or simply a question about my work, feel free to start a conversation on GitHub.
           </p>
-          <label>
-            Name
-            <input type="text" name="name" placeholder="Your name" />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" placeholder="Your email" />
-          </label>
-          <label>
-            Message
-            <textarea name="message" placeholder="Project, role or collaboration idea" rows={5} />
-          </label>
-          <button type="submit">Send message</button>
-        </form>
+          <a className="button" href="https://github.com/umuttig37" target="_blank" rel="noreferrer">
+            Open GitHub profile
+          </a>
+        </div>
       </div>
     </section>
   )

@@ -28,10 +28,10 @@ export function About() {
             <path d="M74 154c-27 14-42 20-48 36-5 13-5 28-3 42 27 17 64 25 107 25s80-8 107-25c2-14 2-29-3-42-6-16-21-22-48-36" />
           </svg>
           <p>
-            I am a Finnish junior software developer with a background in ICT and software development. I enjoy building web applications where the interface, data and business workflow have to work together.
+            I&apos;m a junior software developer based in Finland. I studied ICT and have learned the most by working on projects with real constraints: forms people need to finish, data that has to stay organised and workflows that cannot be confusing.
           </p>
           <p>
-            My current focus is React, TypeScript, backend development and practical business tools. I like learning by building, improving workflows and turning unclear ideas into software that is easier to use.
+            I enjoy working across the frontend and backend. Lately that has meant React and TypeScript interfaces, Python and Java backend work, automation and business-oriented tools. For me, good software starts with understanding the problem before choosing the technology.
           </p>
         </div>
 
