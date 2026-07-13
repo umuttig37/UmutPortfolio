@@ -21,7 +21,7 @@ export function Contact() {
         text="I am open to junior developer roles, project work and conversations about building useful software. GitHub is the easiest place to reach me for now."
       />
       <div className="contact-layout">
-        <div className="contact-links" aria-label="Contact links">
+        <div className="contact-links reveal-target" aria-label="Contact links">
           {contactLinks.map((link) => (
             link.href ? (
               <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
@@ -36,7 +36,7 @@ export function Contact() {
             )
           ))}
         </div>
-        <div className="contact-note">
+        <div className="contact-note reveal-target">
           <span>Let&apos;s talk</span>
           <h3>Have something in mind?</h3>
           <p>

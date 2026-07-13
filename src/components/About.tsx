@@ -14,9 +14,9 @@ const skills = [
 export function About() {
   return (
     <section className="about-section section-shell" id="about">
-      <h2 className="section-title">About</h2>
+      <h2 className="section-title reveal-target">About</h2>
       <div className="about-layout">
-        <div className="about-copy">
+        <div className="about-copy reveal-target">
           <svg className="profile-line" viewBox="0 0 260 260" role="img" aria-label="Minimal profile outline">
             <defs>
               <linearGradient id="profile-gradient" x1="0" x2="1" y1="0" y2="1">
@@ -35,7 +35,7 @@ export function About() {
           </p>
         </div>
 
-        <div className="skill-card-grid" aria-label="Technical skills">
+        <div className="skill-card-grid reveal-target" aria-label="Technical skills">
           {skills.map((skill) => (
             <article className="tech-card" key={skill.label}>
               <strong>{skill.icon}</strong>
