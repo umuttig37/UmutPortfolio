@@ -8,6 +8,7 @@ type ContactItem = {
 
 const contactLinks: ContactItem[] = [
   { label: 'GitHub', value: 'github.com/umuttig37', href: 'https://github.com/umuttig37' },
+  { label: 'LinkedIn', value: 'Umut Efe Uygur', href: 'https://www.linkedin.com/in/umut-uygur-12471725a' },
   { label: 'Location', value: 'Finland' },
   { label: 'Status', value: 'Open to junior developer roles' },
 ]
@@ -16,7 +17,6 @@ export function Contact() {
   return (
     <section className="contact-section section-shell" id="contact">
       <SectionHeading
-        eyebrow="Contact"
         title="Contact"
         text="I am open to junior developer roles, project work and conversations about building useful software. GitHub is the easiest place to reach me for now."
       />

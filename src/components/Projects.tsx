@@ -6,7 +6,6 @@ export function Projects() {
   return (
     <section className="content-section section-shell" id="projects">
       <SectionHeading
-        eyebrow="Projects"
         title="Projects"
         text="Some of the work I have been involved in so far. A few projects are private or still in development, so I explain my part in them instead of adding empty demo links."
       />

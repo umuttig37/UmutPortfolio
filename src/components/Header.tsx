@@ -38,7 +38,7 @@ export function Header() {
             className={activeSection === item.href ? 'active' : undefined}
             key={item.href}
             href={item.href}
-            aria-current={activeSection === item.href ? 'page' : undefined}
+            aria-current={activeSection === item.href ? 'location' : undefined}
             onClick={() => setActiveSection(item.href)}
           >
             {item.label}

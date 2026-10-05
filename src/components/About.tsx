@@ -17,7 +17,7 @@ export function About() {
       <h2 className="section-title reveal-target">About</h2>
       <div className="about-layout">
         <div className="about-copy reveal-target">
-          <svg className="profile-line" viewBox="0 0 260 260" role="img" aria-label="Minimal profile outline">
+          <svg className="profile-line" viewBox="0 0 260 260" aria-hidden="true" focusable="false">
             <defs>
               <linearGradient id="profile-gradient" x1="0" x2="1" y1="0" y2="1">
                 <stop offset="0%" stopColor="#4ca4ef" />
@@ -38,7 +38,7 @@ export function About() {
         <div className="skill-card-grid reveal-target" aria-label="Technical skills">
           {skills.map((skill) => (
             <article className="tech-card" key={skill.label}>
-              <strong>{skill.icon}</strong>
+              <strong aria-hidden="true">{skill.icon}</strong>
               <span>{skill.label}</span>
             </article>
           ))}

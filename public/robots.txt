@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://umuttig37.github.io/UmutPortfolio/sitemap.xml

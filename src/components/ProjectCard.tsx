@@ -9,8 +9,8 @@ const statusLabels: Record<Project['status'], string> = {
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className={`project-card project-${project.status} reveal-target`}>
-      <div className="project-marker" aria-hidden="true">
-        <strong>{project.title.slice(0, 2)}</strong>
+      <div className="project-marker">
+        <strong aria-hidden="true">{project.title.slice(0, 2)}</strong>
         <span>{statusLabels[project.status]}</span>
       </div>
       <div className="project-body">

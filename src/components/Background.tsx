@@ -25,7 +25,9 @@ export function Background() {
     let width = 0
     let height = 0
     let animationFrame = 0
+    let isRunning = false
     let particles: Particle[] = []
+    const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)')
 
     const createParticles = () => {
       width = canvas.width = window.innerWidth * window.devicePixelRatio
@@ -94,17 +96,62 @@ export function Background() {
       }
 
       context.globalAlpha = 1
-      animationFrame = requestAnimationFrame(draw)
+      if (isRunning) {
+        animationFrame = requestAnimationFrame(draw)
+      }
+    }
+
+    const start = () => {
+      if (isRunning || document.hidden || motionPreference.matches) {
+        return
+      }
+
+      isRunning = true
+      draw()
+    }
+
+    const stop = () => {
+      isRunning = false
+      cancelAnimationFrame(animationFrame)
+    }
+
+    const handleVisibility = () => {
+      if (document.hidden) {
+        stop()
+      } else {
+        start()
+      }
+    }
+
+    const handleMotionPreference = () => {
+      stop()
+      draw()
+      start()
+    }
+
+    const handleResize = () => {
+      createParticles()
+      if (motionPreference.matches) {
+        draw()
+      }
     }
 
     createParticles()
-    draw()
+    if (motionPreference.matches) {
+      draw()
+    } else {
+      start()
+    }
 
-    window.addEventListener('resize', createParticles)
+    window.addEventListener('resize', handleResize)
+    document.addEventListener('visibilitychange', handleVisibility)
+    motionPreference.addEventListener('change', handleMotionPreference)
 
     return () => {
-      window.removeEventListener('resize', createParticles)
-      cancelAnimationFrame(animationFrame)
+      window.removeEventListener('resize', handleResize)
+      document.removeEventListener('visibilitychange', handleVisibility)
+      motionPreference.removeEventListener('change', handleMotionPreference)
+      stop()
     }
   }, [])
 

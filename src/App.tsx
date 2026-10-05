@@ -12,13 +12,18 @@ function App() {
     <>
       <ScrollReveal />
       <Background />
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <Header />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <Hero />
         <About />
         <Projects />
         <Contact />
       </main>
+      <footer className="site-footer">
+        <span>&copy; {new Date().getFullYear()} Umut Efe Uygur</span>
+        <a href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+      </footer>
     </>
   )
 }

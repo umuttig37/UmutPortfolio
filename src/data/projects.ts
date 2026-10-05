@@ -26,7 +26,6 @@ export const projects: Project[] = [
       'I work on Levoro as a product owner and developer, helping shape the product while developing its business logic, order flow and admin and driver features.',
     focus: ['Order workflow', 'Admin tools', 'Driver views', 'Pricing logic'],
     tech: ['Python', 'Flask', 'SQLite/PostgreSQL', 'HTML', 'CSS', 'JavaScript', 'Jinja2'],
-    links: [{ label: 'Architecture notes', href: '#contact' }],
     notes:
       'The operational backend is not publicly hosted, so the project is presented as a case study.',
   },
@@ -39,8 +38,7 @@ export const projects: Project[] = [
     focus: ['Authentication', 'Listings', 'User flows', 'Marketplace UI'],
     tech: ['Next.js', 'TypeScript', 'Supabase/Firebase', 'Tailwind', 'Modern frontend stack'],
     links: [
-      { label: 'GitHub', href: 'https://github.com/umuttig37' },
-      { label: 'Details', href: '#contact' },
+      { label: 'View repository', href: 'https://github.com/umuttig37/duunex' },
     ],
   },
   {
@@ -51,6 +49,6 @@ export const projects: Project[] = [
       'A business website and product catalogue for paper and sanitary supplies. The work combines clear product presentation with a straightforward contact and order enquiry flow.',
     focus: ['Catalog structure', 'Contact flow', 'Business content', 'Frontend polish'],
     tech: ['React', 'Vite', 'TypeScript', 'Node/Express', 'Nodemailer'],
-    links: [{ label: 'GitHub', href: 'https://github.com/umuttig37' }],
+    links: [{ label: 'View repository', href: 'https://github.com/umuttig37/SaniteettiSivu' }],
   },
 ]
